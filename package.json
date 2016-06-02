@@ -44,7 +44,8 @@
     "figures": "^1.4.0",
     "indent-string": "^2.1.0",
     "meow": "^3.3.0",
-    "ora": "^0.2.0"
+    "ora": "^0.2.0",
+    "sort-object": "^3.0.0"
   },
   "devDependencies": {
     "ava": "*",
