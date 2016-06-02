@@ -1,4 +1,4 @@
-# dpn [![Build Status](https://travis-ci.org/gillstrom/dpn-cli.svg?branch=master)](https://travis-ci.org/gillstrom/dpn-cli)
+# dpn-cli [![Build Status](https://travis-ci.org/gillstrom/dpn-cli.svg?branch=master)](https://travis-ci.org/gillstrom/dpn-cli)
 
 > Get the dependents of a users npm modules
 
