@@ -1,0 +1,54 @@
+{
+  "name": "dpn-cli",
+  "version": "0.0.0",
+  "description": "Get the dependents of a users npm modules",
+  "license": "MIT",
+  "repository": "gillstrom/dpn-cli",
+  "author": {
+    "name": "Andreas Gillström",
+    "email": "andreasgillstrom@gmail.com",
+    "url": "github.com/gillstrom"
+  },
+  "bin": {
+    "dpn": "cli.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "keywords": [
+    "app",
+    "cli",
+    "cli-app",
+    "depend",
+    "dependent",
+    "dependents",
+    "get",
+    "module",
+    "modules",
+    "npm",
+    "use",
+    "user",
+    "username",
+    "users",
+    "using"
+  ],
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "dpn": "^2.0.0",
+    "figures": "^1.4.0",
+    "indent-string": "^2.1.0",
+    "meow": "^3.3.0",
+    "ora": "^0.2.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "execa": "^0.4.0",
+    "xo": "*"
+  }
+}
