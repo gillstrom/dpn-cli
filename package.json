@@ -13,7 +13,7 @@
     "dpn": "cli.js"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && ava"
@@ -40,7 +40,7 @@
   ],
   "dependencies": {
     "chalk": "^1.1.1",
-    "dpn": "^2.0.0",
+    "dpn": "^3.0.0",
     "figures": "^1.4.0",
     "indent-string": "^2.1.0",
     "meow": "^3.3.0",
@@ -51,5 +51,8 @@
     "ava": "*",
     "execa": "^0.4.0",
     "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }
