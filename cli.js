@@ -47,7 +47,7 @@ dpn(cli.input[0])
 			console.log(chalk.bold(res[el].length) + ' ' + figures.arrowRight + ' ' + el);
 
 			if (cli.flags.verbose) {
-				res[el].forEach(dep => console.log(indentString(chalk.dim(dep), ' ', 6)));
+				res[el].forEach(dep => console.log(indentString(chalk.dim(dep), 6)));
 			}
 		});
 	}).catch(err => {
