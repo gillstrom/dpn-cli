@@ -43,13 +43,18 @@ dpn(cli.input[0])
 			sort: (a, b) => cli.flags.reverse ? res[a].length - res[b].length : res[b].length - res[a].length
 		});
 
-		Object.keys(res).forEach(el => {
-			console.log(chalk.bold(res[el].length) + ' ' + figures.arrowRight + ' ' + el);
+		for (const x of Object.entries(res)) {
+			const name = x[0];
+			const dependencies = x[1];
+
+			console.log(chalk.bold(`${dependencies.length} ${figures.arrowRight} ${name}`));
 
 			if (cli.flags.verbose) {
-				res[el].forEach(dep => console.log(indentString(chalk.dim(dep), ' ', 6)));
+				for (const x of dependencies) {
+					console.log(indentString(chalk.dim(x), 6));
+				}
 			}
-		});
+		}
 	}).catch(err => {
 		spinner.stop();
 		console.log(chalk.bold.red(err));
