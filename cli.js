@@ -8,15 +8,15 @@ const meow = require('meow');
 const ora = require('ora');
 const sortObject = require('sort-object');
 
-const cli = meow([
-	'Usage',
-	'  $ dpn [username]',
-	'',
-	'Options',
-	'  -j, --json     Output the result as JSON',
-	'  -r, --reverse  Reverse the result',
-	'  -v, --verbose  Show the name of the dependents'
-], {
+const cli = meow(`
+	Usage
+	  $ dpn [username]
+
+	Options
+	  -j, --json     Output the result as JSON
+	  -r, --reverse  Reverse the result
+	  -v, --verbose  Show the name of the dependents
+`, {
 	alias: {
 		j: 'json',
 		r: 'reverse',
@@ -43,9 +43,8 @@ dpn(cli.input[0])
 			sort: (a, b) => cli.flags.reverse ? res[a].length - res[b].length : res[b].length - res[a].length
 		});
 
-		for (const x of Object.entries(res)) {
-			const name = x[0];
-			const dependencies = x[1];
+		for (const name of Object.keys(res)) {
+			const dependencies = res[name];
 
 			console.log(chalk.bold(`${dependencies.length} ${figures.arrowRight} ${name}`));
 
